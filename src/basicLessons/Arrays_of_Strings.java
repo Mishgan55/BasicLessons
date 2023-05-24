@@ -1,3 +1,5 @@
+package basicLessons;
+
 public class Arrays_of_Strings {
     public static void main(String[] args) {
         String[] strings=new String[4];

@@ -1,3 +1,5 @@
+package basicLessons;
+
 public class Strings {
     public static void main(String[] args) {
         int x=55;
