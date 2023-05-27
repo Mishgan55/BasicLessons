@@ -7,6 +7,8 @@ public class ClassesAndObjects {
         person1.age=26;
         person1.sayHello();
         person1.sayNameAndAge();
+        int years1 = person1.calculateYearsToRetirement();
+        System.out.println("Years to retirement: "+years1);
 
 
         Person person2=new Person();
@@ -14,6 +16,9 @@ public class ClassesAndObjects {
         person2.age=9;
         person2.sayHello();
         person2.sayNameAndAge();
+        int years2 = person2.calculateYearsToRetirement();
+        System.out.println("Years to retirement: "+years2);
+
 
     }
 
@@ -21,6 +26,13 @@ public class ClassesAndObjects {
 class Person{
     String name;
     int age;
+
+    int calculateYearsToRetirement(){
+        int years=65-age;
+        return years;
+    }
+
+
 
     void sayNameAndAge(){
         System.out.println("My name is "+name+", I am "+age+" years old!");
