@@ -30,6 +30,22 @@ class Person{
     private String name;
     private int age;
 
+    public Person(){
+        this.name="Default name";
+        this.age=0;
+    }
+
+    public Person(String name){
+        this.name=name;
+
+    }
+
+    public Person(String name,int age){
+        this.name=name;
+        this.age=age;
+
+    }
+
     public void setName(String userName){
         if (userName.isEmpty()){
             System.out.println("You didn't write down name!");}
