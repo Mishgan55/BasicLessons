@@ -2,33 +2,49 @@ package basicLessons;
 
 public class ThisExample {
     public static void main(String[] args) {
-        Human human = new Human();
-        human.setName("Misha");
-        human.setAge(25);
-        human.getInfo();
+        Human human = new Human("Misha",25);
+        Human anna = new Human("Anna", 26);
+        Human ksenia = new Human("Ksenia", 9);
+        Human.getPeople();
+
     }
 
 }
 
-class Human{
-     private String name;
-     private int age;
+class Human {
+    private String name;
+    private int age;
+    public static int countPeople;
 
-    public void setName(String name){
-        this.name=name;
+    public Human(String name, int age) {
+        this.name = name;
+        this.age = age;
+        countPeople++;
+
     }
-    public String getName(){
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
         return name;
     }
-    public void setAge(int age){
-        this.age=age;
+
+    public void setAge(int age) {
+        this.age = age;
     }
-    public int getAge(){
+
+    public int getAge() {
         return age;
     }
 
-    public void getInfo(){
-        System.out.println(name+ ", "+age);
+    public static void getPeople(){
+        System.out.println("peoples = "+ countPeople);
+    }
+
+    public void getInfo() {
+        System.out.println(name + ", " + age);
     }
 
 
