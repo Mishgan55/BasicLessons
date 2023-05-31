@@ -29,6 +29,7 @@ public class ClassesAndObjects {
 class Person{
     private String name;
     private int age;
+    private static final int YEARSTORETIREMENT=65;
 
     public Person(){
         this.name="Default name";
@@ -75,7 +76,7 @@ class Person{
     }
 
     int calculateYearsToRetirement(){
-        int years=65-age;
+        int years=YEARSTORETIREMENT-age;
         return years;
     }
 
