@@ -23,7 +23,7 @@ public class HackerRankSolution9 {
         H=scanner.nextInt();
         scanner.close();
 
-        if(B>=0&&H>=0){
+        if(B>0&&H>0){
             flag=true;
 
         }else {flag=false;
