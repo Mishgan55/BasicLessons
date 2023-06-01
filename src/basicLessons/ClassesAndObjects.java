@@ -6,7 +6,7 @@ public class ClassesAndObjects {
         person1.setName("Hanna");
         person1.setAge(26);
         person1.sayHello();
-        person1.sayNameAndAge();
+        System.out.println(person1);
         int years1 = person1.calculateYearsToRetirement();
         System.out.println("Years to retirement: "+years1);
 
@@ -15,10 +15,10 @@ public class ClassesAndObjects {
 
 
         Person person2=new Person();
-        person2.setName("");
-        person2.setAge(-2);
+        person2.setName("Ksenia");
+        person2.setAge(9);
         person2.sayHello();
-        person2.sayNameAndAge();
+        System.out.println(person2);
         int years2 = person2.calculateYearsToRetirement();
         System.out.println("Years to retirement: "+years2);
 
@@ -82,11 +82,13 @@ class Person{
 
 
 
-    void sayNameAndAge(){
-        System.out.println("My name is "+name+", I am "+age+" years old!");
-    }
+
 
     void sayHello(){
         System.out.println("Hello! ");
+    }
+
+    public String toString(){
+        return "My name is "+name+", I am "+age+" years old!";
     }
 }
