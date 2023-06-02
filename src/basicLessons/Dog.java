@@ -1,15 +1,14 @@
 package basicLessons;
 
-public class Dog extends Animal {
+import basicLessons.interfaces.Info;
+
+public class Dog extends Animal implements Info {
     private String name;
 
     public void bark(){
         System.out.println("I am barking!");
     }
 
-    public void show(){
-        System.out.println(name+", "+getWeight());
-    }
 
     public String getName() {
         return name;
@@ -17,5 +16,10 @@ public class Dog extends Animal {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public void showInfo() {
+        System.out.println(this.name+", "+ getWeight());
     }
 }

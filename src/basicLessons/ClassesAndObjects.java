@@ -13,7 +13,7 @@ public class ClassesAndObjects {
         Dog dog = new Dog();
         dog.setName("Jack");
         dog.setWeight(25);
-        dog.show();
+        dog.showInfo();
         dog.bark();
         dog.eat();
 
