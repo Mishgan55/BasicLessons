@@ -2,21 +2,17 @@ package basicLessons;
 
 import basicLessons.interfaces.Info;
 
-public class Dog extends Animal implements Info {
+public class Cat extends Animal implements Info {
     private String name;
 
-    public Dog(String name) {
+    public void eat() {
+        System.out.println("Cat is  eating!");
+    }
 
+
+    public Cat(String name) {
         this.name = name;
     }
-
-    public Dog() {
-    }
-
-    public void bark(){
-        System.out.println("I am barking!");
-    }
-
 
     public String getName() {
         return name;
@@ -28,6 +24,7 @@ public class Dog extends Animal implements Info {
 
     @Override
     public void showInfo() {
-        System.out.println(this.name);
+        System.out.println(name);
+
     }
 }
