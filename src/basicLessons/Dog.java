@@ -27,6 +27,13 @@ public class Dog extends Animal implements Info {
     }
 
     @Override
+    public String toString() {
+        return "Dog{" +
+                "name='" + name + '\'' +
+                '}';
+    }
+
+    @Override
     public void showInfo() {
         System.out.println(this.name);
     }
