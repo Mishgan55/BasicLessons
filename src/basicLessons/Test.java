@@ -16,6 +16,12 @@ public class Test {
         info(dog);
 
 
+        int _int;
+        int _2_;
+        int $int;
+
+
+
 
     }
 
