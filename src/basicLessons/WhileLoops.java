@@ -8,5 +8,6 @@ public class WhileLoops {
             System.out.println(s+value);
             value=value+1;
         }
+
     }
 }
