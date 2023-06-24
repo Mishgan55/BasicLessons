@@ -11,12 +11,12 @@ public class WriteObject {
 
         Person[] people={new Person(1, "Misha"),new Person(2, "Anna"),
                 new Person(3, "Ksenia")};
-        try {
-            FileOutputStream fileOutputStream = new FileOutputStream("people.bin");
-            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+        try(ObjectOutputStream objectOutputStream=
+                    new ObjectOutputStream(new FileOutputStream("people.bin"))) {
+
             objectOutputStream.writeObject(people);
 
-            objectOutputStream.close();
+
         } catch (IOException e) {
             e.printStackTrace();
         }

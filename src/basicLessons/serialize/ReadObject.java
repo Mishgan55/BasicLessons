@@ -9,10 +9,9 @@ import java.util.Arrays;
 
 public class ReadObject {
     public static void main(String[] args) {
-        try {
-        FileInputStream fileInputStream = new FileInputStream("people.bin");
+        try(ObjectInputStream objectInputStream =
+                    new ObjectInputStream(new FileInputStream("people.bin"))) {
 
-            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
             Person[] people = (Person[]) objectInputStream.readObject();
             System.out.println(Arrays.toString(people));
 
